@@ -117,6 +117,13 @@ def analyze_hospital_data(df):
         st.write(f"Data Accuracy: {data_accuracy:.2f}%")
 
 if __name__ == "__main__":
-    file_path = "hospital data analysis.csv"  # Ensure the file is in the same directory
+   import os
+
+file_path = "hospital data analysis.csv"
+
+# Check if file exists (useful for Streamlit Cloud)
+if not os.path.exists(file_path):
+    st.error("Dataset not found! Please upload the correct CSV file.")
+else:
     df = load_data(file_path)
     analyze_hospital_data(df)
