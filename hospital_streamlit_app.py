@@ -31,7 +31,7 @@ def analyze_hospital_data(df):
         df = df[df["Outcome"].isin(outcome_filter)]
 
     # Main dashboard
-    st.title("Hospital Data Analysis Dashboard")
+    st.title("🏥 Hospital Data Analysis Dashboard")
     st.markdown("### Overview of Patient Data, Treatment Costs, and Conditions")
 
     # Key Metrics in Columns
